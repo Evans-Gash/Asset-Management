@@ -1,8 +1,10 @@
-# Asset-Management
-```markdown
-# Property Management System
+Here's an updated version of the README tailored to your **Property Management System (PMS)** project specifics:
 
-Welcome to the Property Management System (PMS)! This application streamlines property management by providing efficient tools for handling properties, tenants, leases, maintenance requests, and payments. It's designed for property managers, landlords, and real estate professionals looking to simplify their workflow and improve tenant satisfaction.
+---
+
+# Property Management System (PMS)
+
+Welcome to the Property Management System (PMS)! This application streamlines property management by providing efficient tools for handling properties, tenants, leases, maintenance requests, and payments. It is designed for property managers, landlords, and real estate professionals to simplify workflows and improve tenant satisfaction.
 
 ---
 
@@ -28,7 +30,7 @@ The Property Management System offers the following features:
 - **Payment Tracking**: Record and monitor rent payments, automate reminders, and generate payment history reports.
 - **Maintenance Requests**: Log and track maintenance requests from tenants, assign tasks to vendors, and manage resolution timelines.
 - **Reports & Analytics**: Generate reports on occupancy rates, income, expenses, and maintenance statistics.
-- **User Roles & Permissions**: Set up different user roles with permissions to control access to features and data.
+- **User Roles & Permissions**: Define user roles with specific permissions to control access to features and data.
 
 ---
 
@@ -38,7 +40,8 @@ To install and run the Property Management System locally, follow these steps:
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (version 14+)
-- [MongoDB](https://www.mongodb.com/) (or your preferred database system)
+- [Python](https://www.python.org/) (version 3.8+)
+- [PostgreSQL](https://www.postgresql.org/) or your preferred database
 
 ### Steps
 1. Clone this repository:
@@ -47,38 +50,60 @@ To install and run the Property Management System locally, follow these steps:
     cd property-management-system
     ```
 
-2. Install the dependencies:
-    ```bash
-    npm install
-    ```
+2. **Backend Setup**:
+   - Navigate to the backend directory:
+     ```bash
+     cd backend
+     ```
+   - Set up a virtual environment and install dependencies:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     pip install -r requirements.txt
+     ```
 
-3. Set up the environment variables:
-   - Create a `.env` file in the root directory and add the following:
-    ```bash
-    PORT=3000
-    DB_CONNECTION_STRING=mongodb://localhost:27017/property-management
-    JWT_SECRET=your_jwt_secret
-    ```
+3. **Frontend Setup**:
+   - Navigate to the frontend directory:
+     ```bash
+     cd ../frontend
+     ```
+   - Install frontend dependencies:
+     ```bash
+     npm install
+     ```
 
-4. Start the server:
-    ```bash
-    npm start
-    ```
+4. **Environment Variables**:
+   - Set up environment variables in both the backend and frontend. Create a `.env` file in the backend root with the following details:
+     ```bash
+     DATABASE_URL=postgresql://user:password@localhost/property_management
+     SECRET_KEY=your_secret_key
+     JWT_SECRET=your_jwt_secret
+     ```
 
-   The application should now be running on `http://localhost:3000`.
+5. **Run the Application**:
+   - Start the backend server:
+     ```bash
+     python app.py
+     ```
+   - Start the frontend server:
+     ```bash
+     npm start
+     ```
+
+   The application should now be running, with the frontend on `http://localhost:3000` and backend on `http://localhost:5000`.
 
 ---
 
 ## Configuration
 
-- **Database**: Configure your database connection in the `.env` file as `DB_CONNECTION_STRING`.
-- **Authentication**: Adjust the JWT secret or other security parameters in the `.env` file for secure authentication.
+- **Database**: Configure your PostgreSQL connection in the backend `.env` file as `DATABASE_URL`.
+- **Authentication**: Adjust the JWT secret or other security parameters in the backend `.env` file.
 
 ---
 
 ## Usage
 
-After installation, navigate to the URL where the application is running. You'll see the following sections in the app:
+After installation, navigate to the URL where the application is running. The system provides the following modules:
 
 - **Dashboard**: Overview of properties, tenants, leases, and payments.
 - **Properties**: View, add, edit, or delete property details.
@@ -89,26 +114,45 @@ After installation, navigate to the URL where the application is running. You'll
 - **Reports**: Generate custom reports and analytics.
 
 ### API Documentation
-For detailed API documentation, see the [API.md](API.md) file in the repository.
+For detailed API documentation, refer to the [API.md](API.md) file in the repository.
 
 ---
 
 ## Technologies Used
 
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Frontend**: React.js (if applicable)
+- **Backend**: Python, Flask, SQLAlchemy
+- **Database**: PostgreSQL
+- **Frontend**: React, Tailwind CSS
 - **Authentication**: JSON Web Tokens (JWT)
-- **Styling**: Bootstrap / TailwindCSS
-- **Testing**: Jest / Mocha (optional)
+- **Styling**: Tailwind CSS
+- **Testing**: Pytest (backend), Jest (frontend)
 
+---
 
+## Contributing
 
+Contributions are welcome! Please follow these steps to contribute:
 
+1. Fork the repository.
+2. Create a new branch (`feature/new-feature`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature/new-feature`).
+5. Open a pull request.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
+
+---
 
 ## Contact
 
-For any questions or suggestions, feel free to contact us at [support@yourdomain.com](mailto:support@yourdomain.com).
+For any questions or suggestions, please contact us at [support@yourdomain.com](mailto:support@yourdomain.com).
 
 Happy property managing!
-```
+
+--- 
+
+This README now better reflects the stack you're using and provides clarity on the system architecture. Let me know if you need any other adjustments!
