@@ -1,7 +1,3 @@
-Here's an updated version of the README tailored to your **Property Management System (PMS)** project specifics:
-
----
-
 # Property Management System (PMS)
 
 Welcome to the Property Management System (PMS)! This application streamlines property management by providing efficient tools for handling properties, tenants, leases, maintenance requests, and payments. It is designed for property managers, landlords, and real estate professionals to simplify workflows and improve tenant satisfaction.
@@ -127,32 +123,5 @@ For detailed API documentation, refer to the [API.md](API.md) file in the reposi
 - **Styling**: Tailwind CSS
 - **Testing**: Pytest (backend), Jest (frontend)
 
----
-
-## Contributing
-
-Contributions are welcome! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch (`feature/new-feature`).
-3. Commit your changes (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature/new-feature`).
-5. Open a pull request.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
-
----
-
-## Contact
-
-For any questions or suggestions, please contact us at [support@yourdomain.com](mailto:support@yourdomain.com).
 
 Happy property managing!
-
---- 
-
-This README now better reflects the stack you're using and provides clarity on the system architecture. Let me know if you need any other adjustments!
